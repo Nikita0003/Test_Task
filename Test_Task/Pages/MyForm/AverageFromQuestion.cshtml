@@ -1,0 +1,86 @@
+﻿@page
+@model Test_Task.Pages.MyForm.AverageFromQuestionModel
+@{
+    ViewData["Title"] = "AverageFromQuestion";
+}
+
+<h2>Средние баллы по вопросам</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Количество респондентов
+            </th>
+            <th>
+                Q1
+            </th>
+            <th>
+                Q2
+            </th>
+            <th>
+                Q3
+            </th>
+            <th>
+                Q4
+            </th>
+            <th>
+                Q5
+            </th>
+            <th>
+                Q6
+            </th>
+            <th>
+                Q7
+            </th>
+            <th>
+                Q8
+            </th>
+            <th>
+                Q9
+            </th>
+            <th>
+                Q10
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>
+                @Model.average[10]
+            </th>
+            <th>
+                @Model.average[0]
+            </th>
+            <th>
+                @Model.average[1]
+            </th>
+            <th>
+                @Model.average[2]
+            </th>
+            <th>
+                @Model.average[3]
+            </th>
+            <th>
+                @Model.average[4]
+            </th>
+            <th>
+                @Model.average[5]
+            </th>
+            <th>
+                @Model.average[6]
+            </th>
+            <th>
+                @Model.average[7]
+            </th>
+            <th>
+                @Model.average[8]
+            </th>
+            <th>
+                @Model.average[9]
+            </th>
+        </tr>
+    </tbody>
+
+</table>

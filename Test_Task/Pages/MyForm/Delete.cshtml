@@ -1,0 +1,94 @@
+﻿@page
+@model Test_Task.Pages.MyForm.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Q1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Q1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Q2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Q2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Q3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Q3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Q4)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Q4)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Q5)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Q5)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Q6)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Q6)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Q7)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Q7)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Q8)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Q8)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Q9)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Q9)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Q10)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Q10)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Sum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Sum)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="User.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Вернуться назад</a>
+    </form>
+</div>

@@ -1,0 +1,265 @@
+﻿@page
+@model Test_Task.Pages.MyForm.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Новое тестирование</h2>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="User.Name" class="control-label"></label>
+                <input asp-for="User.Name" class="form-control" required />
+                <span asp-validation-for="User.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">Вопрос 1:     2 + 2 = </label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q1" value="3" /> 3
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q1" value="5" /> 5
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q1" value="4" /> 4
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Вопрос 2:    Назовите цвета палитры RGB </label>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V2[0]" type="checkbox" value="Синий" />Синий
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V2[1]" type="checkbox" value="Зеленый" />Зеленый
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V2[2]" type="checkbox" value="Желтый" />Желтый
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V2[3]" type="checkbox" value="Красный" />Красный
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V2[4]" type="checkbox" value="Черный" />Черный
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Вопрос 3:     Сколько звезд на небе? </label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q3" value="1" /> 1
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q3" value="2" /> 2
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q3" value="Много" /> Много
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Вопрос 4:      Что сейчас у большинства на уме? </label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q4" value="Котики" /> Котики
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q4" value="COVID-19" /> COVID-19
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q4" value="Работа" /> Работа
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Вопрос 5:      5 + 5 = </label>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V5[0]" type="checkbox" value="10" />10
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V5[1]" type="checkbox" value="9" />9
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V5[2]" type="checkbox" value="Желтый" />Сложнааа
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V5[3]" type="checkbox" value="Красный" />11
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V5[4]" type="checkbox" value="7+3" />7+3
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Вопрос 6:      Ведьмакууу заплатитеее... </label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q6" value="Чеканной монетой" /> Чеканной монетой
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q6" value="COVID-19" /> Вареной котлетой
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q6" value="Работа" /> Здоровой Паветтой
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Вопрос 7:    Отметьте домашних животных </label>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V7[0]" type="checkbox" value="10" />Слон
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V7[1]" type="checkbox" value="Кошка" />Кошка
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V7[2]" type="checkbox" value="Улитка" />Улитка
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V7[3]" type="checkbox" value="Красный" />Тигр
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V7[4]" type="checkbox" value="7+3" />Горилла
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Вопрос 8:     А не спеть ли мне песню... </label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q8" value="Чеканной монетой" /> Не спеть
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q8" value="COVID-19" /> О надежде
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q8" value="О любви" /> О любви
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Вопрос 9:     Выберете верные ответы </label>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V9[0]" type="checkbox" value="10" />Обычный ответ
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V9[1]" type="checkbox" value="Верный ответ" />Верный ответ
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V9[2]" type="checkbox" value="Верный ответ" />Верный ответ
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V9[3]" type="checkbox" value="Верный ответ" />Верный ответ
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="answers.V9[4]" type="checkbox" value="7+3" />Обычный ответ
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Вопрос 10:      Имя разработчика? </label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q10" value="Чеканной монетой" /> Петя
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q10" value="Никита" /> Никита
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="Q10" value="О любви" /> Вова
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться назад</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

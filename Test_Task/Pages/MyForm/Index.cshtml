@@ -1,0 +1,144 @@
+﻿@page
+@model Test_Task.Pages.MyForm.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Общий список</h2>
+
+<p>
+    <a asp-page="Create">Новое тестирование</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q10)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Sum)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.User) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q9)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q10)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sum) /24
+            </td>
+            <td>
+                @*<a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |*@
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+
+        <tr>
+            <td>
+                Средний балл по вопросам
+            </td>
+            <td>
+                @Model.average[0]
+            </td>
+            <td>
+                @Model.average[1]
+            </td>
+            <td>
+                @Model.average[2]
+            </td>
+            <td>
+                @Model.average[3]
+            </td>
+            <td>
+                @Model.average[4]
+            </td>
+            <td>
+                @Model.average[5]
+            </td>
+            <td>
+                @Model.average[6]
+            </td>
+            <td>
+                @Model.average[7]
+            </td>
+            <td>
+                @Model.average[8]
+            </td>
+            <td>
+                @Model.average[9]
+            </td>
+            <td>
+                @Model.average[10] /2,4
+            </td>
+        </tr>
+
+        
+
+    </tbody>
+</table>

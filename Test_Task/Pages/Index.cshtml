@@ -1,0 +1,103 @@
+﻿@page
+@model Test_Task.Pages.MyForm.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Общий список</h2>
+
+<p>
+    <a asp-page="./MyForm/Create">Новое тестирование</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Q10)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User[0].Sum) /24
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.User)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Q1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Q2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Q3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Q4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Q5)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Q6)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Q7)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Q8)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Q9)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Q10)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sum)
+                </td>
+                <td>
+                    @*<a asp-page="./MyForm/Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./MyForm/Details" asp-route-id="@item.ID">Details</a> |*@
+                    <a asp-page="./MyForm/Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
